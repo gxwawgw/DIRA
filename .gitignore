@@ -1,0 +1,47 @@
+.DS_Store
+.vscode/
+.idea/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# External projects and simulator source trees
+SurRoL*/
+surrol/
+FoundationPose/
+MonSter*/
+ext/
+haptic_src/
+real_robot_dvrk/
+
+# Data, logs, and experiment outputs
+data/
+database/
+exp_local/
+logs/
+wandb/
+policies/
+checkpoints/
+outputs/
+
+# Datasets and model artifacts
+*.npz
+*.parquet
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.tar
+*.tar.gz
+*.mp4
+*.avi
+
+# Paper artifacts are referenced externally
+*.pdf
+paper/
+
+# Figures can be added intentionally later
+assets/figures/*.png
+!assets/figures/framework_overview.png
+!assets/figures/.gitkeep

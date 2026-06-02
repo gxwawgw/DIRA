@@ -1,0 +1,45 @@
+name: DIRA
+device: ${device}
+discount: 0.99
+reward_scale: 1
+n_seed_steps: 0
+
+actor_lr: 1e-3
+critic_lr: 1e-3
+noise_eps: 0.1
+soft_target_tau: 0.005
+clip_obs: 200
+norm_clip: 5
+norm_eps: 0.01
+hidden_dim: 256
+sampler:
+  type: her
+  strategy: future
+  k: 4
+update_epoch: 40
+
+# Diffusion policy
+observation_horizon: 1
+prediction_horizon: 1
+num_inference_timesteps: 10
+ema_power: 0.75
+use_image: False
+
+# DIRA Stage 1
+offline_steps: 100_000
+entropy_weight: 1e-3
+entropy_num_steps: 4
+
+# DIRA Stage 2
+critic_warmup_steps: 300
+
+# DIRA Stage 3
+hybrid_demo_ratio: 0.5
+expert_weight: 5
+action_reg_weight: 1
+target_clip: 100
+
+# Strategic Perturbation Generator
+use_online_spg: True
+use_demo_spg: True
+spg_sigma: 0.1
